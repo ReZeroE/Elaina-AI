@@ -5,4 +5,3 @@ termcolor
 numpy
 tflearn
 tensorflow
-pickle

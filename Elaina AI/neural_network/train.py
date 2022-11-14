@@ -2,7 +2,7 @@
 # -*- coding: UTF-8 -*-
 
 # Copyright (c) 2022 Kevin Liu
-# Elaina Voice Assistant (single & multi core) 
+# Elaina Voice Assistant 
 # MIT License
 # Hosted at: https://github.com/ReZeroE/Elaina-Voice-Assistant
 #
@@ -77,12 +77,12 @@ def encode_training_data():
 
     for intent in data['intents']:
         for pattern in intent['patterns']:
-            
+
             wrds = nltk.word_tokenize(pattern)
             words.extend(wrds)
             docs_x.append(wrds)
             docs_y.append(intent['tag'])
-            
+
         # Load all labels
         if intent['tag'] not in labels:
             labels.append(intent['tag'])
@@ -116,22 +116,21 @@ def encode_training_data():
                 bag.append(1)
             else:
                 bag.append(0)
-                
+
         # Generate one-hot based on the tags
         output_row = out_empty[:]
         output_row[labels.index(docs_y[x])] = 1
-        
+
         training.append(bag)
         output.append(output_row)
-        
+
         try:
             with open(TRAINED_DATA_ABSPATH, "wb") as wf:
                 pickle.dump(words, labels, training, output, wf)
         except:
             pass
-        
+
     return training, output, words, labels
-    
 
 
 def create_neural_network(training_data, output_data, force_train):
@@ -157,8 +156,8 @@ def create_neural_network(training_data, output_data, force_train):
 
     # Hidden Layer (fully connected with 8 neurons)
     net = tflearn.fully_connected(net, 8)
+    net = tflearn.fully_connected(net, 16)
     net = tflearn.fully_connected(net, 8)
-    
 
     # Output Layer (softwax activation [output highest neuron probability])
     output_row_length = len(output[0])
@@ -169,7 +168,7 @@ def create_neural_network(training_data, output_data, force_train):
     model = tflearn.DNN(net)
 
     # Fit data 
-    n_epoch     = 5000      # number of times to feed the model the same data
+    n_epoch     = 50000      # number of times to feed the model the same data
     batch_size  = 16         # number of batch per training run
     show_metric = True      # basically verbose training
     
