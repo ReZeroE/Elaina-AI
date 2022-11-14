@@ -154,13 +154,13 @@ class Recorder:
         s = time.time()
         rmss = []
         while True:
-            if time.time() - s > 2:
+            if time.time() - s > 1:
                 break
             input = self.stream.read(CHUNK)
             rmss.append(self.rms(input))
             self.rms_threshold = sum(rmss) / len(rmss)
             
-        self.rms_threshold += 5
+        self.rms_threshold += 15
         
 
     def write(self, recording):
