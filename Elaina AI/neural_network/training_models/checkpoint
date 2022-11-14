@@ -1,0 +1,2 @@
+model_checkpoint_path: "C:\\Coding\\Python\\Workspace\\Elaina Voice Assistant\\neural_network\\training_models/elaina_model.tflearn"
+all_model_checkpoint_paths: "C:\\Coding\\Python\\Workspace\\Elaina Voice Assistant\\neural_network\\training_models/elaina_model.tflearn"
