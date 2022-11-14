@@ -1,0 +1,8 @@
+pyaudio
+speechrecognition
+pyttsx3
+termcolor
+numpy
+tflearn
+tensorflow
+pickle
