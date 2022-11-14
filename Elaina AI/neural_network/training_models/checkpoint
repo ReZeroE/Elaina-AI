@@ -1,2 +1,2 @@
-model_checkpoint_path: "/home/ugrads/majors/kevinliu/personal-projects/Elaina-AI/Elaina AI/neural_network/training_models/elaina_model.tflearn"
-all_model_checkpoint_paths: "/home/ugrads/majors/kevinliu/personal-projects/Elaina-AI/Elaina AI/neural_network/training_models/elaina_model.tflearn"
+model_checkpoint_path: "c:\\Coding\\Python\\Workspace\\Elaina AI\\git\\Elaina-AI\\Elaina AI\\neural_network\\training_models/elaina_model.tflearn"
+all_model_checkpoint_paths: "c:\\Coding\\Python\\Workspace\\Elaina AI\\git\\Elaina-AI\\Elaina AI\\neural_network\\training_models/elaina_model.tflearn"

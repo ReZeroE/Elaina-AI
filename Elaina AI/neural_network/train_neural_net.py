@@ -30,11 +30,9 @@ from nltk.stem.lancaster import LancasterStemmer
 stemmer = LancasterStemmer()
 
 import os
-import sys
 import numpy
 import tflearn
 import tensorflow
-import random
 import json
 import pickle
 
@@ -168,7 +166,7 @@ def create_neural_network(training_data, output_data, force_train):
     model = tflearn.DNN(net)
 
     # Fit data 
-    n_epoch     = 50000      # number of times to feed the model the same data
+    n_epoch     = 1000      # number of times to feed the model the same data
     batch_size  = 16         # number of batch per training run
     show_metric = True      # basically verbose training
     
@@ -200,7 +198,7 @@ def bag_of_words(s, words):
     return numpy.array(bag)            
 
 
-def setup_neural_net(force_encode=False, force_train=False):
+def create_and_train_neural_network(force_encode=False, force_train=False):
     """
     Elaina neural network driver.
     1. Encode Training Data
@@ -259,7 +257,7 @@ def comprehend_text(trained_model, input_text, words, labels):
         return None
 
 if __name__ == "__main__":
-    trained_model, words, labels = setup_neural_net(force_encode=True, force_train=True)
+    trained_model, words, labels = create_and_train_neural_network(force_encode=True, force_train=True)
     output = comprehend_text(trained_model, " is it raining outside", words, labels)
     
     print(f"Predicted: {output}")

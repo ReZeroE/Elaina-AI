@@ -24,6 +24,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+import os
 from utils.helper import uprint
 import speech_recognition as sr
 
@@ -35,16 +36,19 @@ def wav_to_text(wav_file=None):
     r = setup_sr()
     
     if wav_file == None:
-        wav_file = "audio_recordings/user_audio.wav"
+        wav_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "audio_recordings/user_audio.wav")
 
     with sr.AudioFile(wav_file) as source:
         audio = r.record(source)
     try:
         user_texts = r.recognize_google(audio)
         uprint(user_texts)
+        return user_texts
     except Exception as e:
         uprint("Exception: " + str(e), dev=True)
+        return None
     
-    
-setup_sr()
-wav_to_text()
+
+if __name__ == "__main__":
+    setup_sr()
+    wav_to_text()

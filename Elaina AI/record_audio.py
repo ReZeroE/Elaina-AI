@@ -186,4 +186,7 @@ def run_recorder():
     print(a.rms_threshold)
     ret = a.listen(once=True)
     
-run_recorder()
+    return ret
+    
+if __name__ == "__main__":
+    run_recorder()
