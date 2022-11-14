@@ -1,8 +1,8 @@
-# Elaina-Voice-Assistant
+# Elaina-AI
 Lightweight voice assistant that supports Windows and MacOS automation. 
 
 ## License
-Elaina VA is fully licensed under **MIT**. Permissions inlcude:
+Elaina AI is fully licensed under **MIT**. Permissions inlcude:
  ```
  - Commercial use
  - Distribution
