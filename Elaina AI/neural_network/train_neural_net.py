@@ -166,8 +166,8 @@ def create_neural_network(training_data, output_data, force_train):
     model = tflearn.DNN(net)
 
     # Fit data 
-    n_epoch     = 1000      # number of times to feed the model the same data
-    batch_size  = 16         # number of batch per training run
+    n_epoch     = 500000      # number of times to feed the model the same data
+    batch_size  = 8         # number of batch per training run
     show_metric = True      # basically verbose training
     
     if force_train == False:
