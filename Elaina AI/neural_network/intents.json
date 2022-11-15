@@ -3,28 +3,36 @@
         {"tag": "greeting",
         "patterns": [
             "Hi", 
-            "How are you", 
-            "Is anyone there?", 
-            "Hello", "Good day", 
-            "Whats up"],
-        "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help?"],
+            "Hey", 
+            "Hello", 
+            "How are you",  
+            "Good day", 
+            "Whats up",
+            "howdy",
+            "yo",
+            "yo what's up",
+            "greetings"
+        ],
+        "responses": [""],
         "context_set": ""
         },
-
 
         {"tag": "goodbye",
         "patterns": [
             "cya", 
             "See you later", 
-            "Goodbye", 
+            "goodbye", 
             "I am Leaving", 
-            "Have a Good day"
+            "Have a Good day",
+            "peace",
+            "im heading out",
+            "bye",
+            "bye bye"
         ],
-        "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"],
+        "responses": [""],
         "context_set": ""
         },
 
-        
         {"tag": "weather",
         "patterns": [
             "what is the weather today", 
@@ -32,9 +40,96 @@
             "is today rainy", 
             "is today raining", 
             "is it cold today", 
-            "is is hot today"
+            "is is hot today",
+            "weather"
         ],
-        "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"],
+        "responses": [""],
+        "context_set": ""
+        },
+
+        {"tag": "time",
+        "patterns": [
+            "what time is it", 
+            "what is the time", 
+            "how late is it", 
+            "is it late now", 
+            "how early is it",
+            "whats the time",
+            "is the o clock",
+            "what day is today",
+            "time now"
+        ],
+        "responses": [""],
+        "context_set": ""
+        },
+
+        {"tag": "about",
+        "patterns": [
+            "who are you", 
+            "what are you",
+            "what is your name", 
+            "who created you", 
+            "are you an AI", 
+            "are you a bot",
+            "tell me about yourself",
+            "describe yourself",
+            "introduce yourself"
+        ],
+        "responses": [""],
+        "context_set": ""
+        },
+
+        {"tag": "menu",
+        "patterns": [
+            "what can you do", 
+            "what are you able to do",
+            "can you", 
+            "it is possible for you to", 
+            "you are able to", 
+            "functionality menu",
+            "tell me what you can do",
+            "what you are capable of"
+        ],
+        "responses": [""],
+        "context_set": ""
+        },
+
+        {"tag": "open",
+        "patterns": [
+            "open", 
+            "can you open",
+            "start", 
+            "can you start", 
+            "open the application"
+        ],
+        "responses": [""],
+        "context_set": ""
+        },
+
+        {"tag": "alarm",
+        "patterns": [
+            "set an alarm", 
+            "can you set an alarm",
+            "set alarm at", 
+            "alarm", 
+            "wake me up at",
+            "wake me up"
+        ],
+        "responses": [""],
+        "context_set": ""
+        },
+
+        {"tag": "volume",
+        "patterns": [
+            "can you lower the volume", 
+            "can you turn down the volume",
+            "lower the volume", 
+            "turn down the volume",
+            "can you turn up the volume",
+            "turn up the volume",
+            "mute the"
+        ],
+        "responses": [""],
         "context_set": ""
         }
     ]
