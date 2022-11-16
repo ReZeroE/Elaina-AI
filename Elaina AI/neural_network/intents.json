@@ -36,6 +36,8 @@
         {"tag": "weather",
         "patterns": [
             "what is the weather today", 
+            "weather outside",
+            "weather now",
             "is today sunny", 
             "is today rainy", 
             "is today raining", 
@@ -88,7 +90,9 @@
             "you are able to", 
             "functionality menu",
             "tell me what you can do",
-            "what you are capable of"
+            "what you are capable of",
+            "tell me about what you can do?",
+            "what you can do?"
         ],
         "responses": [""],
         "context_set": ""

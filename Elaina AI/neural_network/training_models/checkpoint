@@ -1,2 +1,2 @@
-model_checkpoint_path: "/home/ugrads/majors/kevinliu/personal-projects/Elaina-AI/Elaina AI/neural_network/training_models/elaina_model.tflearn"
-all_model_checkpoint_paths: "/home/ugrads/majors/kevinliu/personal-projects/Elaina-AI/Elaina AI/neural_network/training_models/elaina_model.tflearn"
+model_checkpoint_path: "/Users/kevinliu/Documents/Programming/Python/Elaina-AI/Elaina AI/neural_network/training_models/elaina_model.tflearn"
+all_model_checkpoint_paths: "/Users/kevinliu/Documents/Programming/Python/Elaina-AI/Elaina AI/neural_network/training_models/elaina_model.tflearn"

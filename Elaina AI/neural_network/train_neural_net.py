@@ -26,6 +26,7 @@
 
 
 import nltk
+nltk.download('punkt')
 from nltk.stem.lancaster import LancasterStemmer
 stemmer = LancasterStemmer()
 
@@ -37,7 +38,7 @@ import json
 import pickle
 
 
-CONFIDENCE_THRESHOLD = 0.8
+CONFIDENCE_THRESHOLD = 0.95
 
 
 
@@ -166,7 +167,7 @@ def create_neural_network(training_data, output_data, force_train):
     model = tflearn.DNN(net)
 
     # Fit data 
-    n_epoch     = 500000      # number of times to feed the model the same data
+    n_epoch     = 5000      # number of times to feed the model the same data
     batch_size  = 8         # number of batch per training run
     show_metric = True      # basically verbose training
     
