@@ -33,6 +33,41 @@
         "context_set": ""
         },
 
+        {"tag": "positive",
+        "patterns": [
+            "yes", 
+            "yes please", 
+            "yeah", 
+            "yup", 
+            "sounds good",
+            "okay",
+            "do that",
+            "do it",
+            "go ahead",
+            "that's right",
+            "correct"
+        ],
+        "responses": [""],
+        "context_set": ""
+        },
+
+        {"tag": "negative",
+        "patterns": [
+            "no", 
+            "don't", 
+            "don't do it", 
+            "no no no", 
+            "please don't",
+            "stop",
+            "stop it",
+            "that's not right",
+            "that isn't right",
+            "incorrect"
+        ],
+        "responses": [""],
+        "context_set": ""
+        },
+
         {"tag": "weather",
         "patterns": [
             "what is the weather today", 
@@ -43,7 +78,10 @@
             "is today raining", 
             "is it cold today", 
             "is is hot today",
-            "weather"
+            "weather",
+            "when will it start raining",
+            "when will it become sunny again",
+            "when will the rain clear out"
         ],
         "responses": [""],
         "context_set": ""
